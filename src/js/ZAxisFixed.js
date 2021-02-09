@@ -24,9 +24,8 @@ export default class FixElement {
     } else if (value < this.range[0]) {
       opacityValue = 1;
     } else {
-      opacityValue = parseFloat(
-        (this.range[1] - value) / (this.range[1] - this.range[0])
-      );
+      let x = (this.range[1] - value) / (this.range[1] - this.range[0])
+      opacityValue = Math.log2(x + 1);
     }
 
     this.styleMap.set('opacity', `opacity: ${opacityValue}`);
