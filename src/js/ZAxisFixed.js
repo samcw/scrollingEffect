@@ -19,12 +19,14 @@ export default class FixElement {
   //change the element opacity value
   changeOpacity(value) {
     let opacityValue = 1;
+
+    //at the begin, opacity will be 1 to keep the content remain.
     if (value > this.range[1]) {
       opacityValue = 0;
-    } else if (value < this.range[0]) {
+    } else if (value < this.range[0] + 0.5 * (this.range[1] - this.range[0])) {
       opacityValue = 1;
     } else {
-      let x = (this.range[1] - value) / (this.range[1] - this.range[0])
+      let x = (this.range[1] - value) / (0.5 * (this.range[1] - this.range[0]))
       opacityValue = Math.log2(x + 1);
     }
 
