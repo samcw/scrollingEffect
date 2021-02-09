@@ -1,0 +1,9 @@
+{
+  "name": "srcoll-effect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": "https://github.com/samcw/introduction.git",
+  "author": "samcw",
+  "license": "MIT"
+}

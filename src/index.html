@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction</title>
+    <style>
+      #wrap {
+        height: 4000px;
+      }
+      #home {
+        z-index: 40;
+      }
+      #introduction {
+        z-index: 30;
+      }
+      #project {
+        z-index: 20;
+      }
+      .fix {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="home" class="fix">
+      <h1>Home</h1>
+      <p>Some words here.</p>
+    </div>
+    <div id="introduction" class="fix">
+      <h1>Introduction</h1>
+      <p>My name is samcw.</p>
+    </div>
+    <div id="project" class="fix">
+      <h1>Project</h1>
+      <p>There are some projects.</p>
+    </div>
+    <div id="wrap"></div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
