@@ -28,9 +28,48 @@
 
         background-color: white;
       }
+      .fix-nav {
+        z-index: 50;
+
+        position: fixed;
+        left: 10%;
+        top: 20%
+      }
+      .fix-nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+      }
+      .fix-nav ul li {
+        padding: 2px 10px;
+        margin: 0 1px;
+        font-weight: 200;
+        font-size: 0.8em;
+        letter-spacing: 3px;
+
+        background-color: grey;
+        color: white;
+      }
+      .fix-nav ul li:hover {
+        background-color: rgb(219, 141, 141);
+        color: white;
+        cursor: pointer;
+      }
+      .fix-nav ul .fix-nav-active {
+        background-color: rgb(219, 141, 141);
+        color: white;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
+    <div id="nav" class="fix-nav">
+      <ul>
+        <li class="fix-nav-active">HOME</li>
+        <li>INTRODUCTION</li>
+        <li>PROJECT</li>
+      </ul>
+    </div>
     <div id="home" class="fix">
       <h1>Home</h1>
     </div>
@@ -41,6 +80,6 @@
       <h1>Project</h1>
     </div>
     <div id="wrap"></div>
-    <script src="./index.js" type="module"></script>
+    <script src="./dist/bundle.js"></script>
   </body>
 </html>

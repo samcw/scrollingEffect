@@ -1,12 +1,14 @@
 export default class FixElement {
-  constructor(target, range) {
+  target: Element;
+  range: Array<number>;
+  styleMap: Map<string, string>;
+  constructor(target: Element, range: Array<number>) {
     this.target = target;
     this.range = range;
     this.styleMap = new Map();
   }
   //change the element z axis value
-  changeZ(value) {
-    let scroll = this.range[1];
+  changeZ(value: number) {
     let translate3dZ = value <= this.range[0] ? 0 : value - this.range[0];
 
     this.styleMap.set(
@@ -17,7 +19,7 @@ export default class FixElement {
     );
   }
   //change the element opacity value
-  changeOpacity(value) {
+  changeOpacity(value: number) {
     let opacityValue = 1;
 
     //at the begin, opacity will be 1 to keep the content remain.
